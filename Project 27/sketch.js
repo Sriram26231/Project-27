@@ -1,6 +1,7 @@
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
+const Constraint = Matter.Constraint;
 
 var engine, world;
 var ground, ball1, ball2, ball3, ball4, ball5;
@@ -23,19 +24,19 @@ function setup(){
         restitution: 1.0
     }
 
-    ball1 = Bodies.circle(100,100,20, ball_options);
+    ball1 = Bodies.circle(100,140,20, ball_options);
     World.add(world,ball1);
-	ball2 = Bodies.circle(150,100,20, ball_options);
+	ball2 = Bodies.circle(150,180,20, ball_options);
     World.add(world,ball2);
-	ball3 = Bodies.circle(200,100,20, ball_options);
+	ball3 = Bodies.circle(200,50,20, ball_options);
     World.add(world,ball3);
-	ball4 = Bodies.circle(250,100,20, ball_options);
+	ball4 = Bodies.circle(250,310,20, ball_options);
     World.add(world,ball4);
-	ball5 = Bodies.circle(300,100,20, ball_options);
+	ball5 = Bodies.circle(300,10,20, ball_options);
     World.add(world,ball5)
     roof = Bodies.rectangle(200,20,300,20)
 
-  
+    //rope1 = new Rope(ball1.body,roof.body, 23, 0)
 
 
  
